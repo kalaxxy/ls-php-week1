@@ -11,7 +11,7 @@ echo "“!|/’”\ " . "<br>";
 const PICTURE_SUM = 80;
 const PICTURE_PEN = 23;
 const PICTURE_PENCIL = 40;
-$picturePaint = PICTURE_SUM - PICTURE_PEN + PICTURE_PENCIL;
+$picturePaint = PICTURE_SUM - PICTURE_PEN - PICTURE_PENCIL;
 echo "Рисунков красками: " . $picturePaint  . "<br>";
 
 // 3

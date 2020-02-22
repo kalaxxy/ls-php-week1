@@ -11,16 +11,16 @@ echo "“!|/’”\ " . "<br>";
 const PICTURE_SUM = 80;
 const PICTURE_PEN = 23;
 const PICTURE_PENCIL = 40;
-$picturePaint = PICTURE_SUM - (PICTURE_PEN + PICTURE_PENCIL);
+$picturePaint = PICTURE_SUM - PICTURE_PEN + PICTURE_PENCIL;
 echo "Рисунков красками: " . $picturePaint  . "<br>";
 
 // 3
-$anotherAge = 29;
+$anotherAge = 17;
 if ($anotherAge >= 18 && $anotherAge <= 65) {
     echo "Вам еще работать и работать"  . "<br>";
 } elseif ($anotherAge > 65) {
     echo "Вам пора на пенсию"   . "<br>";
-} elseif ($anotherAge >= 1 && $anotherAge <= 17) {
+} elseif ($anotherAge >= 1 && $anotherAge < 18) {
     echo "Вам ещё рано работать"  . "<br>";
 } else {
     echo "Неизвестный возраст"  . "<br>";
@@ -41,32 +41,31 @@ switch ($day) {
 
 // 5
 $bmw = [
-    name => "bmw",
     model => "X5",
     speed => 120,
     doors => 5,
     year => "2015"
 ];
 $toyota = [
-    name => "toyota",
     model => "Y5",
     speed => 121,
     doors => 4,
     year => "2014"
 ];
 $opel = [
-    name => "opel",
     model => "Z5",
     speed => 122,
     doors => 3,
     year => "2013"
 ];
 
-$cars = [$bmw, $toyota, $opel];
+$cars["bmw"] = $bmw;
+$cars["toyota"] = $toyota;
+$cars["opel"] = $opel;
 
 foreach ($cars as $key => $value)
 {
-    echo "CAR " . $value[name] . "<br>" . $value[model] . " " . $value[speed] . " " . $value[doors] . " " . $value[year] . "<br>";
+    echo "CAR " . $key . "<br>" . $value[model] . " " . $value[speed] . " " . $value[doors] . " " . $value[year] . "<br>";
 }
 
 // 6
